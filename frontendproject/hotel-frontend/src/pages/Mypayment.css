@@ -1,0 +1,118 @@
+.my-payments-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.my-payments-container h1 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.no-payments {
+  text-align: center;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.no-payments p {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+}
+
+.payments-table-container {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+.payments-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.payments-table th,
+.payments-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.payments-table th {
+  background-color: #34495e;
+  color: white;
+  font-weight: 500;
+}
+
+.payments-table tr:hover {
+  background-color: #f8f9fa;
+}
+
+.method-badge {
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.method-badge.card {
+  background-color: #e8f4f8;
+  color: #2980b9;
+}
+
+.method-badge.easypaisa {
+  background-color: #e8f8f5;
+  color: #27ae60;
+}
+
+.method-badge.jazzcash {
+  background-color: #f5e8f8;
+  color: #8e44ad;
+}
+
+.method-badge.bank {
+  background-color: #f8f5e8;
+  color: #f39c12;
+}
+
+.status-badge {
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.status-badge.completed {
+  background-color: #e8f8f5;
+  color: #27ae60;
+}
+
+.loading-spinner {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 5rem auto;
+}
+
+.error-message {
+  color: #e74c3c;
+  background-color: #fadbd8;
+  padding: 1rem;
+  border-radius: 5px;
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 500px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

@@ -1,0 +1,32 @@
+.admin-bookings-container {
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  color: #2c3e50;
+}
+
+.error {
+  color: red;
+  text-align: center;
+}
+
+.bookings-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.bookings-table th, .bookings-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.bookings-table th {
+  background-color: #f0f0f0;
+}

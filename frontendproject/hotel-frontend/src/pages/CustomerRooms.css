@@ -1,0 +1,310 @@
+/* ===== Base Styles ===== */
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== Full-width Background ===== */
+.customer-rooms-wrapper {
+  background: 
+    /* White overlay with 80% opacity */
+    linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),
+    /* High-quality hotel background */
+    url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80') 
+    no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* ===== Content Container ===== */
+.customer-rooms-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  position: relative;
+}
+
+/* ===== Header Styles ===== */
+.rooms-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.rooms-header h1 {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.rooms-subtitle {
+  color: #2c3e50;
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  opacity: 0.9;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+/* ===== Rooms Grid Layout ===== */
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== Room Card Styles ===== */
+.room-card {
+  background: rgba(255, 255, 255, 0.93);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.room-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* ===== Room Image Section ===== */
+.room-image-container {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.room-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.room-card:hover .room-image {
+  transform: scale(1.05);
+}
+
+/* ===== Status Badge ===== */
+.room-status {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: white;
+  z-index: 2;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.room-status.available {
+  background-color: #27ae60;
+}
+
+.room-status.booked {
+  background-color: #e74c3c;
+}
+
+/* ===== Price Tag ===== */
+.room-price-tag {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  background-color: rgba(0,0,0,0.7);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  z-index: 2;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* ===== Room Details Section ===== */
+.room-details {
+  padding: 1.8rem;
+}
+
+.room-title {
+  margin: 0 0 0.3rem 0;
+  color: #2c3e50;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.room-type {
+  color: #3498db;
+  margin: 0 0 1rem 0;
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.room-description {
+  color: #7f8c8d;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* ===== Features List ===== */
+.room-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 1.8rem;
+}
+
+.feature {
+  background-color: #f8f9fa;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: #34495e;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* ===== Booking Button ===== */
+.book-btn {
+  width: 100%;
+  padding: 1rem;
+  background-color: #e67e22;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.book-btn:hover {
+  background-color: #d35400;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.book-btn.unavailable {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ===== Loading Spinner ===== */
+.loading-spinner {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 5rem auto;
+}
+/* ===== Room Type Filter ===== */
+.room-type-filter {
+  margin: 1.5rem auto;
+  text-align: center;
+}
+
+.room-type-filter label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.room-type-select {
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: white;
+  font-size: 1rem;
+  width: 250px;
+  max-width: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.room-type-select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+/* ===== No Rooms Message ===== */
+.no-rooms-message {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  font-size: 1.2rem;
+  color: #7f8c8d;
+}
+
+/* ===== Error Message ===== */
+.error-message {
+  color: #e74c3c;
+  background-color: #fadbd8;
+  padding: 1rem;
+  border-radius: 5px;
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 500px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* ===== Animation ===== */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ===== Mobile Responsiveness ===== */
+@media (max-width: 768px) {
+  .customer-rooms-container {
+    padding: 1rem;
+  }
+  
+  .rooms-header h1 {
+    font-size: 2rem;
+  }
+  
+  .rooms-subtitle {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+  
+  .rooms-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .room-card {
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+  }
+  
+  .room-image-container {
+    height: 200px;
+  }
+}

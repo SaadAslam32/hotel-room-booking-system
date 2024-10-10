@@ -1,0 +1,163 @@
+/* RoomForm.css */
+.room-form-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                    url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.glassmorphism {
+  background: rgba(233, 248, 248, 0.7); /* Darker background for better contrast */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  padding: 2.5rem;
+  color: #080808;
+}
+
+.room-form-container {
+  max-width: 600px;
+  width: 100%;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.room-form-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.room-form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.room-form-container label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.room-form-container input,
+.room-form-container textarea,
+.room-form-container select {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #333; /* Dark text for inputs */
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.room-form-container input::placeholder {
+  color: #999;
+}
+
+.room-form-container input:focus,
+.room-form-container textarea:focus,
+.room-form-container select:focus {
+  outline: none;
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.5);
+}
+
+.room-form-container textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.submit-btn, .cancel-btn {
+  flex: 1;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #3a7bd5 0%, #00d2ff 100%);
+}
+
+.cancel-btn {
+  background: linear-gradient(135deg, #eb3349 0%, #f45c43 100%);
+}
+
+.submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(58, 123, 213, 0.4);
+}
+
+.cancel-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(235, 51, 73, 0.4);
+}
+
+.submit-btn:active, .cancel-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .room-form-container {
+    padding: 1.5rem;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .room-form-page {
+    padding: 1rem;
+  }
+  
+  .room-form-container {
+    padding: 1.2rem;
+  }
+  
+  .room-form-container h2 {
+    font-size: 1.8rem;
+  }
+}
